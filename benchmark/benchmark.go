@@ -15,7 +15,7 @@ func print02(num int64) string {
 }
 
 func print03(num int) string {
-	return strconv.Itoa(num) //int to string itoa is the best efficient
+	return strconv.Itoa(num) //int to string itoa is the most efficient
 }
 
 func main() {

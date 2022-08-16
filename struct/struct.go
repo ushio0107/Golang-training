@@ -13,7 +13,7 @@ type Human struct {
 	age  int
 }
 
-func interf() { //main
+func sturcture() { //main
 	ipv4 := map[string]IPv4{
 		"localhost": {127, 0, 0, 1},
 		"google":    {8, 8, 8, 8},

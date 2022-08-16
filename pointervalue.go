@@ -43,7 +43,7 @@ func (e email) Send() {
 	fmt.Printf("From: %s, To: %s\n", e.from, e.to)
 }
 
-func main() { //main
+func pointervalue() { //main
 	c := &car{}
 
 	fmt.Printf("C Address: %p\n", c) //*car, not need &
