@@ -9,8 +9,10 @@ import (
 type myint int
 
 type person struct {
-	name string
-	age  uint // unsigned int
+	name   string
+	age    uint // unsigned int
+	groups []string
+	crush  *person
 }
 
 func addOne(p *person) { //pass by reference
@@ -18,9 +20,31 @@ func addOne(p *person) { //pass by reference
 	fmt.Println(p.age)
 }
 
-//
+// func
+func GetName(p *person) string {
+	return p.name
+}
 
-func main() {
+// method
+func (p *person) GetName() string {
+	return p.name
+}
+
+func (p *person) getGroups() []string {
+	return p.groups
+}
+
+func (p *person) setCrush(crush *person) {
+	p.crush = crush
+}
+
+func (p *person) getCrushName() string {
+	return p.crush.name
+}
+
+// declare a variable outside func, main or anythings means that this variable
+
+func structex() {
 
 	// declare
 	var toby person
@@ -49,5 +73,9 @@ func main() {
 	fmt.Println("molly: ", molly)
 	// output &{kelly 10}, print & at the beginning means the output is token from the value of the address,
 	// print out the content of the memory
+	fmt.Println(toby.GetName())
+	fmt.Println(GetName(&toby))
+	fmt.Println(GetName(kelly)) // different declare
+	// var toby person, var kelly *person
 
 }
