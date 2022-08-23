@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func fmtpack() {
 	s1 := "I"
 	s2 := "am"
 	s3 := "string"
